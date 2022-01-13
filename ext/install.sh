@@ -28,7 +28,7 @@ pushd cpp-driver
 cmake -DCMAKE_CXX_FLAGS="-fPIC -Wno-error=format-truncation" -DCMAKE_INSTALL_PREFIX:PATH=$builddir -DCASS_BUILD_STATIC=ON \
   -DCASS_BUILD_SHARED=OFF -DCMAKE_BUILD_TYPE=RELEASE -DCASS_USE_ZLIB=ON \
   -DCMAKE_INSTALL_LIBDIR:PATH=lib $basedir/../lib/cpp-driver/
-make CXXFLAGS="-Wno-error=format-truncation"
+make CXXFLAGS="-Wno-error ./configure"
 make install
 popd
 rm -Rf cpp-driver
